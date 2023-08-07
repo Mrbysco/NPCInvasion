@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+issueTrackerURL="https://github.com/Mrbysco/NPCInvasion/issues"
+license="MIT"
+
+[[mods]]
+modId="npcinvasion"
+version="${file.jarVersion}"
+displayName="NPC Invasion"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/npc-invasion"
+authors="Mrbysco"
+description='''
+🍦 Hmmm Ice cream so good!
+'''
+credits=""
+
+[[dependencies.npcinvasion]]
+modId="forge"
+mandatory=true
+versionRange="[43.1.0,)"
+ordering="NONE"
+side="BOTH"

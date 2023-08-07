@@ -1,0 +1,26 @@
+{
+  "ganggang": {
+    "sounds": [
+      "npcinvasion:gg"
+    ],
+    "subtitle": "npcinvasion.subtitle.ganggang"
+  },
+  "icecream_so_good": {
+    "sounds": [
+      "npcinvasion:icecream_so_good"
+    ],
+    "subtitle": "npcinvasion.subtitle.icecream_so_good"
+  },
+  "no_spicy": {
+    "sounds": [
+      "npcinvasion:no_spicy"
+    ],
+    "subtitle": "npcinvasion.subtitle.no_spicy"
+  },
+  "yippee": {
+    "sounds": [
+      "npcinvasion:yippee"
+    ],
+    "subtitle": "npcinvasion.subtitle.yippee"
+  }
+}
