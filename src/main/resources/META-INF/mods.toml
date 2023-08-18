@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[43,)"
+loaderVersion="[46,)"
 issueTrackerURL="https://github.com/Mrbysco/NPCInvasion/issues"
 license="MIT"
 
@@ -12,11 +12,10 @@ authors="Mrbysco"
 description='''
 🍦 Hmmm Ice cream so good!
 '''
-credits=""
 
 [[dependencies.npcinvasion]]
-modId="forge"
+modId="minecraft"
 mandatory=true
-versionRange="[43.1.0,)"
+versionRange="[1.20,1.21)"
 ordering="NONE"
 side="BOTH"

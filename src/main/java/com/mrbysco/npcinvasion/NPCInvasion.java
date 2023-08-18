@@ -44,6 +44,6 @@ public class NPCInvasion {
 	}
 
 	private static RegistryObject<SoundEvent> registerSound(String name) {
-		return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(NPCInvasion.MOD_ID, name)));
+		return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(NPCInvasion.MOD_ID, name)));
 	}
 }
