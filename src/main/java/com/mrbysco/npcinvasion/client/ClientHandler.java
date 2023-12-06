@@ -3,7 +3,7 @@ package com.mrbysco.npcinvasion.client;
 import com.mrbysco.npcinvasion.util.SoundHelper;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.client.resources.sounds.SoundInstance;
-import net.minecraftforge.client.event.sound.PlaySoundEvent;
+import net.neoforged.neoforge.client.event.sound.PlaySoundEvent;
 
 public class ClientHandler {
 	public static void onSound(PlaySoundEvent event) {
@@ -15,10 +15,10 @@ public class ClientHandler {
 		if (replacement != null) {
 			SoundInstance soundInstance = original;
 			float volume = soundInstance.getSound() != null ? soundInstance.getVolume() : 1.0F;
-			SoundInstance test = new SimpleSoundInstance(replacement.soundEvent(), soundInstance.getSource(),
+			SoundInstance replacedInstance = new SimpleSoundInstance(replacement.soundEvent(), soundInstance.getSource(),
 					volume, 1.0F, SoundInstance.createUnseededRandom(),
 					soundInstance.getX(), soundInstance.getY(), soundInstance.getZ());
-			event.setSound(test);
+			event.setSound(replacedInstance);
 		}
 	}
 }

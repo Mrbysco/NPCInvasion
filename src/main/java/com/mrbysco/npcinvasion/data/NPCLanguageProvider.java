@@ -1,11 +1,11 @@
 package com.mrbysco.npcinvasion.data;
 
 import com.mrbysco.npcinvasion.NPCInvasion;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraftforge.common.data.LanguageProvider;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.common.data.LanguageProvider;
+
+import java.util.function.Supplier;
 
 public class NPCLanguageProvider extends LanguageProvider {
 	public NPCLanguageProvider(PackOutput packOutput) {
@@ -26,7 +26,7 @@ public class NPCLanguageProvider extends LanguageProvider {
 	 * @param sound The sound event registry object
 	 * @param text  The subtitle text
 	 */
-	public void addSubtitle(RegistryObject<SoundEvent> sound, String text) {
+	public void addSubtitle(Supplier<SoundEvent> sound, String text) {
 		this.addSubtitle(sound.get(), text);
 	}
 

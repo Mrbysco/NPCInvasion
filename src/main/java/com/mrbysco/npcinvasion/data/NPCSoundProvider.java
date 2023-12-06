@@ -1,11 +1,10 @@
 package com.mrbysco.npcinvasion.data;
 
 import com.mrbysco.npcinvasion.NPCInvasion;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.SoundDefinitionsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.SoundDefinitionsProvider;
 
 public class NPCSoundProvider extends SoundDefinitionsProvider {
 
