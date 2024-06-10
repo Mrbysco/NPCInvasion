@@ -59,11 +59,7 @@ public class SoundHelper {
 
 	public static void sortCache() {
 		if (!replacementMap.isEmpty()) {
-			for (Map.Entry<ResourceLocation, List<SoundReplacement>> entry : replacementMap.entrySet()) {
-				List<SoundReplacement> replacements = entry.getValue();
-				replacements.sort(Comparator.comparingDouble(SoundReplacement::chance));
-				entry.setValue(replacements);
-			}
+			replacementMap.forEach((key, value) -> value.sort(Comparator.comparingDouble(SoundReplacement::chance)));
 		}
 	}
 
