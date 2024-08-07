@@ -1,1 +1,1 @@
-* Fix potential config related crash
+* Initial update to 1.21
