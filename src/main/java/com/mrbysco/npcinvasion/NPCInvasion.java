@@ -40,6 +40,10 @@ public class NPCInvasion {
 	}
 
 	private static DeferredHolder<SoundEvent, SoundEvent> registerSound(String name) {
-		return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(NPCInvasion.MOD_ID, name)));
+		return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(NPCInvasion.modLoc(name)));
+	}
+	
+	public static ResourceLocation modLoc(String name) {
+		return ResourceLocation.fromNamespaceAndPath(MOD_ID, name);
 	}
 }

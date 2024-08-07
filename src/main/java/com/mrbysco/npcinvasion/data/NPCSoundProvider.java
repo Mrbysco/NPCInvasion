@@ -33,6 +33,6 @@ public class NPCSoundProvider extends SoundDefinitionsProvider {
 	}
 
 	public ResourceLocation modLoc(String name) {
-		return new ResourceLocation(NPCInvasion.MOD_ID, name);
+		return NPCInvasion.modLoc(name);
 	}
 }
