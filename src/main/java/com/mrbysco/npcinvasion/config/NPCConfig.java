@@ -31,7 +31,7 @@ public class NPCConfig {
 
 			noSpicy = builder
 					.comment("What sound to replace with 'No Spicy!'")
-					.defineListAllowEmpty(List.of("noSpicy"), () -> List.of("minecraft:entity.creeper.primed"),
+					.defineListAllowEmpty("noSpicy", () -> List.of("minecraft:entity.creeper.primed"),
 							String::new, o -> (o instanceof String));
 
 			icecreamChance = builder
@@ -40,7 +40,7 @@ public class NPCConfig {
 
 			icecream = builder
 					.comment("What sound to replace with 'Ice Cream So Good!'")
-					.defineListAllowEmpty(List.of("icecream"), () -> List.of("minecraft:entity.creeper.primed"),
+					.defineListAllowEmpty("icecream", () -> List.of("minecraft:entity.creeper.primed"),
 							String::new, o -> (o instanceof String));
 
 			ganggangChance = builder
@@ -49,7 +49,7 @@ public class NPCConfig {
 
 			ganggang = builder
 					.comment("What sound to replace with 'Gang Gang'")
-					.defineListAllowEmpty(List.of("ganggang"), () -> List.of("minecraft:entity.creeper.primed"),
+					.defineListAllowEmpty("ganggang", () -> List.of("minecraft:entity.creeper.primed"),
 							String::new, o -> (o instanceof String));
 
 			yippeeChance = builder
@@ -58,7 +58,7 @@ public class NPCConfig {
 
 			yippee = builder
 					.comment("What sound to replace with 'Yippeee'")
-					.defineListAllowEmpty(List.of("yippee"), () -> List.of("minecraft:entity.generic.explode"),
+					.defineListAllowEmpty("yippee", () -> List.of("minecraft:entity.generic.explode"),
 							String::new, o -> (o instanceof String));
 
 			builder.pop();
