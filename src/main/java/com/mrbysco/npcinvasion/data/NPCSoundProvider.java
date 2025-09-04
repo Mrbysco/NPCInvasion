@@ -3,13 +3,12 @@ package com.mrbysco.npcinvasion.data;
 import com.mrbysco.npcinvasion.NPCInvasion;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.common.data.SoundDefinitionsProvider;
 
 public class NPCSoundProvider extends SoundDefinitionsProvider {
 
-	public NPCSoundProvider(PackOutput packOutput, ExistingFileHelper helper) {
-		super(packOutput, NPCInvasion.MOD_ID, helper);
+	public NPCSoundProvider(PackOutput packOutput) {
+		super(packOutput, NPCInvasion.MOD_ID);
 	}
 
 	@Override

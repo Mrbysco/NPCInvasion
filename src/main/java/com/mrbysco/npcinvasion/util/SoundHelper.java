@@ -26,7 +26,7 @@ public class SoundHelper {
 		if (replacementMap.containsKey(originalSound)) {
 			List<SoundReplacement> list = replacementMap.get(originalSound);
 			Collections.shuffle(list);
-			SoundReplacement replacement = list.get(0);
+			SoundReplacement replacement = list.getFirst();
 			if (rand.nextDouble() <= replacement.chance) {
 				return replacement;
 			}
