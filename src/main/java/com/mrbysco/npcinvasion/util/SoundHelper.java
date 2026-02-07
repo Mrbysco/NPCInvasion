@@ -1,7 +1,7 @@
 package com.mrbysco.npcinvasion.util;
 
 import com.mrbysco.npcinvasion.NPCInvasion;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 
 import java.util.ArrayList;
@@ -16,13 +16,13 @@ public class SoundHelper {
 	private static final Random rand = new Random();
 
 
-	public static final Map<ResourceLocation, List<SoundReplacement>> replacementMap = new HashMap<>();
+	public static final Map<Identifier, List<SoundReplacement>> replacementMap = new HashMap<>();
 
-	public static boolean containsSound(ResourceLocation originalSound) {
+	public static boolean containsSound(Identifier originalSound) {
 		return replacementMap.containsKey(originalSound);
 	}
 
-	public static SoundReplacement getRandomSound(ResourceLocation originalSound) {
+	public static SoundReplacement getRandomSound(Identifier originalSound) {
 		if (replacementMap.containsKey(originalSound)) {
 			List<SoundReplacement> list = replacementMap.get(originalSound);
 			Collections.shuffle(list);
@@ -42,16 +42,16 @@ public class SoundHelper {
 		if (!configValues.isEmpty()) {
 			for (String configValue : configValues) {
 				if (configValue.contains(":")) {
-					ResourceLocation location = ResourceLocation.tryParse(configValue);
+					Identifier location = Identifier.tryParse(configValue);
 					if (location != null) {
 						List<SoundReplacement> replacementList = replacementMap.getOrDefault(location, new ArrayList<>());
 						replacementList.add(new SoundReplacement(event, chance));
 						replacementMap.put(location, replacementList);
 					} else {
-						NPCInvasion.LOGGER.error(String.format("Invalid sound location used for NoSpicy: %s", configValue));
+						NPCInvasion.LOGGER.error("Invalid sound location used for NoSpicy: {}", configValue);
 					}
 				} else {
-					NPCInvasion.LOGGER.error(String.format("Invalid sound location used for NoSpicy, could not find \":\" in %s", configValue));
+					NPCInvasion.LOGGER.error("Invalid sound location used for NoSpicy, could not find \":\" in {}", configValue);
 				}
 			}
 		}

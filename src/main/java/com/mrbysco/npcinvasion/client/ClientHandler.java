@@ -8,10 +8,10 @@ import net.neoforged.neoforge.client.event.sound.PlaySoundEvent;
 public class ClientHandler {
 	public static void onSound(PlaySoundEvent event) {
 		SoundInstance original = event.getOriginalSound();
-		if (original == null || !SoundHelper.containsSound(original.getLocation()))
+		if (original == null || !SoundHelper.containsSound(original.getIdentifier()))
 			return;
 
-		SoundHelper.SoundReplacement replacement = SoundHelper.getRandomSound(original.getLocation());
+		SoundHelper.SoundReplacement replacement = SoundHelper.getRandomSound(original.getIdentifier());
 		if (replacement != null) {
 			SoundInstance soundInstance = original;
 			float volume = soundInstance.getSound() != null ? soundInstance.getVolume() : 1.0F;

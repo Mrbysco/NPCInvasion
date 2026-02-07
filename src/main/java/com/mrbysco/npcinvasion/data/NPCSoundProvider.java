@@ -2,7 +2,7 @@ package com.mrbysco.npcinvasion.data;
 
 import com.mrbysco.npcinvasion.NPCInvasion;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.neoforge.common.data.SoundDefinitionsProvider;
 
 public class NPCSoundProvider extends SoundDefinitionsProvider {
@@ -27,11 +27,11 @@ public class NPCSoundProvider extends SoundDefinitionsProvider {
 				.with(sound(modLoc("yippee"))));
 	}
 
-	public String modSubtitle(ResourceLocation id) {
+	public String modSubtitle(Identifier id) {
 		return NPCInvasion.MOD_ID + ".subtitle." + id.getPath();
 	}
 
-	public ResourceLocation modLoc(String name) {
+	public Identifier modLoc(String name) {
 		return NPCInvasion.modLoc(name);
 	}
 }
