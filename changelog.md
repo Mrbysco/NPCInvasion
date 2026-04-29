@@ -1,1 +1,1 @@
-* Enable in-game config screen
+* Update to 26.1.2
